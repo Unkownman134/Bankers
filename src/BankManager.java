@@ -48,7 +48,7 @@ public class BankManager {
     public boolean requestResource(int p, int[] request) {
         int m = data.getResourceCount();
 
-        System.out.println("进程" + p + "请求资源(");
+        System.out.print("进程" + p + "请求资源(");
         for (int i = 0; i < m; i++) {
             System.out.print(request[i] + (i < m - 1 ? ", " : ""));
         }
