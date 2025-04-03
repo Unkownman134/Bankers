@@ -28,7 +28,9 @@ public class BankData {
     }
 
     public void setAvailable(int[] available) {
-        //TODO:后期实现
+        if (available.length == m) {
+            this.available = available;
+        }
     }
 
     public int[][] getMax() {
