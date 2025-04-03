@@ -50,5 +50,27 @@ public class BankersAlgorithmTest {
         } else {
             System.out.println("系统状态不安全！");
         }
+
+        //请求测试
+        char choice = 0;
+        do {
+            System.out.println("请输入申请进程：");
+            int p = scanner.nextInt();
+            if (p<0 || p>=n) {
+                System.out.println("没有这个进程！");
+                continue;
+            }
+
+            int[] req=new int[m];
+            System.out.println("请输入进程"+p+"的请求资源数：");
+            for (int i = 0; i < m; i++){
+                req[i]=scanner.nextInt();
+            }
+            manager.requestResource(p,req);
+            System.out.print("是否继续申请？ Y/N");
+            choice=scanner.next().charAt(0);
+        } while (choice=='Y');
+
+        scanner.close();
     }
 }
