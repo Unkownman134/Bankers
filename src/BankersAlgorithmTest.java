@@ -40,5 +40,15 @@ public class BankersAlgorithmTest {
 
         // 计算 Need 矩阵
         bankData.computeNeed();
+
+        BankManager manager = new BankManager(bankData);
+
+        //T0初始状态安全检查
+        System.out.println("初始系统状态检测：");
+        if (manager.isSafe()){
+            System.out.println("系统状态安全！");
+        } else {
+            System.out.println("系统状态不安全！");
+        }
     }
 }
