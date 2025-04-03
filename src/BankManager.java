@@ -76,7 +76,7 @@ public class BankManager {
         int[][] need = data.getNeed();
         int[] available = data.getAvailable();
 
-        int[] oldAilocationRow = allocation[p].clone();
+        int[] oldAllocationRow = allocation[p].clone();
         int[] oldNeedRow = need[p].clone();
 
         for (int i = 0; i < m; i++) {
@@ -91,7 +91,7 @@ public class BankManager {
         } else {
             for (int i = 0; i < m; i++) {
                 available[i] = oldAvailable[i];
-                allocation[p][i] = oldAilocationRow[i];
+                allocation[p][i] = oldAllocationRow[i];
                 need[p][i] = oldNeedRow[i];
             }
             System.out.println("请求失败！");
